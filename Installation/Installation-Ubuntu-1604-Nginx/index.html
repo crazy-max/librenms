@@ -9,7 +9,7 @@
         <meta name="description" content="LibreNMS user and developer documentation">
       
       
-        <link rel="canonical" href="http://docs.librenms.org/Installation/Installation-Ubuntu-1604-Nginx/">
+        <link rel="canonical" href="https://docs.librenms.org/Installation/Installation-Ubuntu-1604-Nginx/">
       
       
         <meta name="author" content="LibreNMS">
@@ -73,7 +73,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="http://docs.librenms.org" title="LibreNMS Docs" class="md-header-nav__button md-logo" aria-label="LibreNMS Docs">
+    <a href="https://docs.librenms.org" title="LibreNMS Docs" class="md-header-nav__button md-logo" aria-label="LibreNMS Docs">
       
   <img src="../../img/librenms.svg" alt="logo">
 
@@ -159,7 +159,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="http://docs.librenms.org" title="LibreNMS Docs" class="md-nav__button md-logo" aria-label="LibreNMS Docs">
+    <a href="https://docs.librenms.org" title="LibreNMS Docs" class="md-nav__button md-logo" aria-label="LibreNMS Docs">
       
   <img src="../../img/librenms.svg" alt="logo">
 
@@ -2108,7 +2108,7 @@ are not, prepend <code>sudo</code> to the shell commands (the ones that aren't
 at <code>mysql&gt;</code> prompts) or temporarily become a user with root
 privileges with <code>sudo -s</code> or <code>sudo -i</code>.</p>
 </blockquote>
-<p><strong>Please note the minimum supported PHP version is 7.2.5</strong></p>
+<p><strong>Please note the minimum supported PHP version is 7.3</strong></p>
 <h1 id="install-required-packages">Install Required Packages</h1>
 <div class="highlight"><pre><span></span><code>apt install acl composer fping git graphviz imagemagick mariadb-client mariadb-server mtr-tiny nginx-full nmap php7.0-cli php7.0-curl php7.0-fpm php7.0-gd php7.0-mbstring php7.0-mcrypt php7.0-mysql php7.0-snmp php7.0-xml php7.0-zip python-memcache python-mysqldb rrdtool snmp snmpd whois
 </code></pre></div>
@@ -2167,6 +2167,11 @@ systemctl restart php7.0-fpm
  <span class="kn">charset</span> <span class="s">utf-8</span><span class="p">;</span>
  <span class="kn">gzip</span> <span class="no">on</span><span class="p">;</span>
  <span class="kn">gzip_types</span> <span class="s">text/css</span> <span class="s">application/javascript</span> <span class="s">text/javascript</span> <span class="s">application/x-javascript</span> <span class="s">image/svg+xml</span> <span class="s">text/plain</span> <span class="s">text/xsd</span> <span class="s">text/xsl</span> <span class="s">text/xml</span> <span class="s">image/x-icon</span><span class="p">;</span>
+
+ <span class="kn">proxy_read_timeout</span> <span class="mi">300</span><span class="p">;</span>
+ <span class="kn">proxy_connect_timeout</span> <span class="mi">300</span><span class="p">;</span>
+ <span class="kn">proxy_send_timeout</span> <span class="mi">300</span><span class="p">;</span>
+
  <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
   <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri/</span> <span class="s">/index.php?</span><span class="nv">$query_string</span><span class="p">;</span>
  <span class="p">}</span>
@@ -2250,20 +2255,19 @@ site: <a href="https://www.librenms.org/#support">https://www.librenms.org/#supp
 <p>Now that you've installed LibreNMS, we'd suggest that you have a read
 of a few other docs to get you going:</p>
 <ul>
-<li><a href="http://docs.librenms.org/Support/Performance">Performance tuning</a></li>
-<li><a href="http://docs.librenms.org/Extensions/Alerting/">Alerting</a></li>
-<li><a href="http://docs.librenms.org/Extensions/Device-Groups/">Device Groups</a></li>
-<li><a href="http://docs.librenms.org/Extensions/Auto-Discovery/">Auto discovery</a></li>
+<li><a href="../../Support/Performance/">Performance tuning</a></li>
+<li><a href="../../Extensions/Alerting/">Alerting</a></li>
+<li><a href="../../Extensions/Device-Groups/">Device Groups</a></li>
+<li><a href="../../Extensions/Auto-Discovery/">Auto discovery</a></li>
 </ul>
 <h1 id="closing">Closing</h1>
 <p>We hope you enjoy using LibreNMS. If you do, it would be great if you
-would consider opting into the stats system we have, please see <a href="http://docs.librenms.org/General/Callback-Stats-and-Privacy/">this
+would consider opting into the stats system we have, please see <a href="../../General/Callback-Stats-and-Privacy/">this
 page</a> on
 what it is and how to enable it.</p>
-<p>If you would like to help make LibreNMS better there are <a href="http://docs.librenms.org/Support/FAQ/#what-can-i-do-to-help">many ways to
+<p>If you would like to help make LibreNMS better there are <a href="../../Support/FAQ/#a-namefaq9-what-can-i-do-to-helpa">many ways to
 help</a>. You
-can also <a href="https://t.libren.ms/donations">back LibreNMS on Open
-Collective</a>.</p>
+can also <a href="https://t.libren.ms/donations">back LibreNMS on Open Collective</a>.</p>
                 
                   
                 

@@ -9,7 +9,7 @@
         <meta name="description" content="LibreNMS user and developer documentation">
       
       
-        <link rel="canonical" href="http://docs.librenms.org/Support/Performance/">
+        <link rel="canonical" href="https://docs.librenms.org/Support/Performance/">
       
       
         <meta name="author" content="LibreNMS">
@@ -73,7 +73,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="http://docs.librenms.org" title="LibreNMS Docs" class="md-header-nav__button md-logo" aria-label="LibreNMS Docs">
+    <a href="https://docs.librenms.org" title="LibreNMS Docs" class="md-header-nav__button md-logo" aria-label="LibreNMS Docs">
       
   <img src="../../img/librenms.svg" alt="logo">
 
@@ -159,7 +159,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="http://docs.librenms.org" title="LibreNMS Docs" class="md-nav__button md-logo" aria-label="LibreNMS Docs">
+    <a href="https://docs.librenms.org" title="LibreNMS Docs" class="md-nav__button md-logo" aria-label="LibreNMS Docs">
       
   <img src="../../img/librenms.svg" alt="logo">
 
@@ -2367,7 +2367,7 @@
 <p>This document will give you some guidance on optimising your setup.</p>
 <p>The suggestions are in a rough order of how much impact they will have.</p>
 <h2 id="rrdcached">RRDCached</h2>
-<p><strong>We absolutely recommend running this, it will save on IO load</strong>. <a href="http://docs.librenms.org/Extensions/RRDCached/">RRDCached</a></p>
+<p><strong>We absolutely recommend running this, it will save on IO load</strong>. <a href="../../Extensions/RRDCached/">RRDCached</a></p>
 <h2 id="mysql-optimisation">MySQL Optimisation</h2>
 <p>It's advisable after 24 hours of running MySQL that you run <a href="https://raw.githubusercontent.com/major/MySQLTuner-perl/master/mysqltuner.pl">MySQL
 Tuner</a>
@@ -2389,7 +2389,7 @@ do this globally in <code>config.php</code> like:</p>
 <div class="highlight"><pre><span></span><code><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;poller_modules&#39;</span><span class="p">][</span><span class="s1">&#39;ospf&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
 </code></pre></div>
 <p>You can disable modules globally then re-enable the module per device
-or the opposite way. For a list of modules please see <a href="http://docs.librenms.org/Support/Poller%20Support/">Poller
+or the opposite way. For a list of modules please see <a href="../Poller%20Support/">Poller
 modules</a></p>
 <h2 id="snmp-max-repeaters">SNMP Max Repeaters</h2>
 <p>We have support for SNMP Max repeaters which can be handy on devices
@@ -2449,7 +2449,7 @@ CPU. So be careful. This can be changed by going to the cron job for
 librenms. Usually in <code>/etc/cron.d/librenms</code> and changing the "16"</p>
 <p><div class="highlight"><pre><span></span><code>*/5  *    * * *   librenms    /opt/librenms/cronic /opt/librenms/poller-wrapper.py 16
 </code></pre></div>
-Please also see <a href="https://docs.librenms.org/Extensions/Dispatcher-Service/">Dispatcher Service</a></p>
+Please also see <a href="../../Extensions/Dispatcher-Service/">Dispatcher Service</a></p>
 <h2 id="recursive-dns">Recursive DNS</h2>
 <p>If your install uses hostnames for devices and you have quite a lot
 then it's advisable to setup a local recursive dns instance on the
@@ -2472,7 +2472,7 @@ usage of your poller negatively. You can also set it for a specific OS:
 with both full and selective polling, display a table with the
 difference and optionally enable or disable selected ports polling for
 devices which would benefit from a change. Note that it doesn't
-continously re-evaluate this, it will only be updated when the script
+continuously re-evaluate this, it will only be updated when the script
 is run. There are a number of options:</p>
 <p><div class="highlight"><pre><span></span><code>-h &lt;device id&gt; | &lt;device hostname wildcard&gt;  Poll single device or wildcard hostname
 -e &lt;percentage&gt;                              Enable/disable selected ports polling for devices which would benefit &lt;percentage&gt; from a change
@@ -2492,7 +2492,7 @@ ssl http2;</code> in the Virtualhost config.</p>
 <h2 id="php-opcache">PHP-opcache</h2>
 <p>A lot of performance can be gained from setting up <code>php-opcache</code> correctly. </p>
 <p><strong>Note: Memory based caching with PHP cli will increase memory usage and slow things down. File based caching is not as fast as memory based and is more likely to have stale cache issues.</strong></p>
-<p>Some distributions allow seperate cli, mod_php and php-fpm configurations, we can use this to set the optimal config.</p>
+<p>Some distributions allow separate cli, mod_php and php-fpm configurations, we can use this to set the optimal config.</p>
 <h3 id="for-web-servers-using-mod_php-and-php-fpm">For web servers using mod_php and php-fpm</h3>
 <p>Update your web PHP opcache.ini.  Possible locations: <code>/etc/php/7.2/fpm/conf.d/opcache.ini</code>, <code>/etc/php.d/opcache.ini</code>, or <code>/etc/php/conf.d/opcache.ini</code> </p>
 <div class="highlight"><pre><span></span><code>zend_extension=opcache

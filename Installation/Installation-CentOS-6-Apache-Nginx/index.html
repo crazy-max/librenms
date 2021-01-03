@@ -9,7 +9,7 @@
         <meta name="description" content="LibreNMS user and developer documentation">
       
       
-        <link rel="canonical" href="http://docs.librenms.org/Installation/Installation-CentOS-6-Apache-Nginx/">
+        <link rel="canonical" href="https://docs.librenms.org/Installation/Installation-CentOS-6-Apache-Nginx/">
       
       
         <meta name="author" content="LibreNMS">
@@ -73,7 +73,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="http://docs.librenms.org" title="LibreNMS Docs" class="md-header-nav__button md-logo" aria-label="LibreNMS Docs">
+    <a href="https://docs.librenms.org" title="LibreNMS Docs" class="md-header-nav__button md-logo" aria-label="LibreNMS Docs">
       
   <img src="../../img/librenms.svg" alt="logo">
 
@@ -159,7 +159,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="http://docs.librenms.org" title="LibreNMS Docs" class="md-nav__button md-logo" aria-label="LibreNMS Docs">
+    <a href="https://docs.librenms.org" title="LibreNMS Docs" class="md-nav__button md-logo" aria-label="LibreNMS Docs">
       
   <img src="../../img/librenms.svg" alt="logo">
 
@@ -2108,8 +2108,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gneral" class="md-nav__link">
-    Gneral
+  <a href="#general" class="md-nav__link">
+    General
   </a>
   
 </li>
@@ -2137,7 +2137,7 @@ are not, prepend <code>sudo</code> to the shell commands (the ones that aren't
 at <code>mysql&gt;</code> prompts) or temporarily become a user with root
 privileges with <code>sudo -s</code> or <code>sudo -i</code>.</p>
 </blockquote>
-<p><strong>Please note the minimum supported PHP version is 7.2.5</strong></p>
+<p><strong>Please note the minimum supported PHP version is 7.3</strong></p>
 <h1 id="on-the-db-server">On the DB Server</h1>
 <p>This host is where the MySQL database runs.  It could be the same
 machine as your network management server (this is the most common
@@ -2158,7 +2158,7 @@ service mysqld start
 chkconfig mariadb on
 service mariadb start
 </code></pre></div>
-<h2 id="gneral">Gneral</h2>
+<h2 id="general">General</h2>
 <p>Now continue with the installation:</p>
 <div class="highlight"><pre><span></span><code>chkconfig snmpd on
 service snmpd start
@@ -2329,7 +2329,7 @@ directory as well as create an Apache vhost.</p>
 chown -R librenms:librenms /opt/librenms
 chmod <span class="m">775</span> rrd
 </code></pre></div>
-<p>If you're planing on running rrdcached, make sure that the path is
+<p>If you're planning on running rrdcached, make sure that the path is
 also chmod'ed to 775 and chown'ed to librenms:librenms.</p>
 <p><strong>SELinux</strong></p>
 <blockquote>
@@ -2450,7 +2450,7 @@ comment (the <code>#</code> mark) on the line:</p>
 <h1 id="install-complete">Install complete</h1>
 <p>Please allow for 2-3 runs of the poller-wrapper for data to start
 appearing in the WebUI. If you don't see data after this, please refer
-to the <a href="http://docs.librenms.org/Support/FAQ/">FAQ</a> for assistance.</p>
+to the <a href="../../Support/FAQ/">FAQ</a> for assistance.</p>
 <p>That's it!  You now should be able to log in to
 <a href="http://librenms.example.com/">http://librenms.example.com/</a>. Please note that we have not covered
 HTTPS setup in this example, so your LibreNMS install is not secure by
@@ -2458,8 +2458,7 @@ default.  Please do not expose it to the public Internet unless you
 have configured HTTPS and taken appropriate web server hardening
 steps.</p>
 <p>It would be great if you would consider opting into the stats system
-we have, please see <a href="http://docs.librenms.org/General/Callback-Stats-and-Privacy/">this
-page</a> on
+we have, please see <a href="../../General/Callback-Stats-and-Privacy/">this page</a> on
 what it is and how to enable it.</p>
                 
                   

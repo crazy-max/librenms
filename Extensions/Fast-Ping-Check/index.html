@@ -9,7 +9,7 @@
         <meta name="description" content="LibreNMS user and developer documentation">
       
       
-        <link rel="canonical" href="http://docs.librenms.org/Extensions/Fast-Ping-Check/">
+        <link rel="canonical" href="https://docs.librenms.org/Extensions/Fast-Ping-Check/">
       
       
         <meta name="author" content="LibreNMS">
@@ -73,7 +73,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="http://docs.librenms.org" title="LibreNMS Docs" class="md-header-nav__button md-logo" aria-label="LibreNMS Docs">
+    <a href="https://docs.librenms.org" title="LibreNMS Docs" class="md-header-nav__button md-logo" aria-label="LibreNMS Docs">
       
   <img src="../../img/librenms.svg" alt="logo">
 
@@ -159,7 +159,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="http://docs.librenms.org" title="LibreNMS Docs" class="md-nav__button md-logo" aria-label="LibreNMS Docs">
+    <a href="https://docs.librenms.org" title="LibreNMS Docs" class="md-nav__button md-logo" aria-label="LibreNMS Docs">
       
   <img src="../../img/librenms.svg" alt="logo">
 
@@ -2185,7 +2185,7 @@ status, enabling this will be a waste of resources. You can find one
 in the <a href="../../Alerting/Rules/#alert-rules-collection">Alert Rules
 Collection</a>.</p>
 <h2 id="setting-the-ping-check-to-1-minute">Setting the ping check to 1 minute</h2>
-<p>1: If you are using <a href="http://docs.librenms.org/Extensions/RRDCached/">RRDCached</a>, stop the service.</p>
+<p>1: If you are using <a href="../RRDCached/">RRDCached</a>, stop the service.</p>
 <div class="highlight"><pre><span></span><code>- This will flush all pending writes so that the rrdstep.php script can change the steps.
 </code></pre></div>
 <p>2: Change the ping_rrd_step setting in config.php</p>
@@ -2199,7 +2199,7 @@ creation in rrd files)</p>
 ping checks</p>
 <div class="highlight"><pre><span></span><code>*    *    * * *   librenms    /opt/librenms/ping.php &gt;&gt; /dev/null 2&gt;&amp;1
 </code></pre></div>
-<p>5: If applicable: Start the <a href="http://docs.librenms.org/Extensions/RRDCached/">RRDCached</a> service</p>
+<p>5: If applicable: Start the <a href="../RRDCached/">RRDCached</a> service</p>
 <p><strong>NOTE</strong>: If you are using distributed pollers you can restrict a
 poller to a group by appending <code>-g</code> to the cron entry.  Alternatively,
 you should only run ping.php on a single node.</p>

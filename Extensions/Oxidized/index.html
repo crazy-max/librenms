@@ -9,7 +9,7 @@
         <meta name="description" content="LibreNMS user and developer documentation">
       
       
-        <link rel="canonical" href="http://docs.librenms.org/Extensions/Oxidized/">
+        <link rel="canonical" href="https://docs.librenms.org/Extensions/Oxidized/">
       
       
         <meta name="author" content="LibreNMS">
@@ -73,7 +73,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="http://docs.librenms.org" title="LibreNMS Docs" class="md-header-nav__button md-logo" aria-label="LibreNMS Docs">
+    <a href="https://docs.librenms.org" title="LibreNMS Docs" class="md-header-nav__button md-logo" aria-label="LibreNMS Docs">
       
   <img src="../../img/librenms.svg" alt="logo">
 
@@ -159,7 +159,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="http://docs.librenms.org" title="LibreNMS Docs" class="md-nav__button md-logo" aria-label="LibreNMS Docs">
+    <a href="https://docs.librenms.org" title="LibreNMS Docs" class="md-nav__button md-logo" aria-label="LibreNMS Docs">
       
   <img src="../../img/librenms.svg" alt="logo">
 
@@ -2157,7 +2157,7 @@ switch on 'Enable the return of groups to Oxidized':</p>
 <div class="highlight"><pre><span></span><code><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;oxidized&#39;</span><span class="p">][</span><span class="s1">&#39;default_group&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;default&#39;</span><span class="p">;</span>
 </code></pre></div>
 <h1 id="selinux">SELinux</h1>
-<p>If you're runnng SELinux, you'll need to allow httpd to connect
+<p>If you're running SELinux, you'll need to allow httpd to connect
 outbound to the network, otherwise Oxidized integration in the web UI
 will silently fail:</p>
 <div class="highlight"><pre><span></span><code>setsebool -P httpd_can_network_connect 1
